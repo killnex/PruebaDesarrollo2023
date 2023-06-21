@@ -4,6 +4,7 @@ using AppEstudiantes.Popup;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace AppEstudiantes
@@ -26,6 +27,8 @@ namespace AppEstudiantes
             Service service = new Service();
             Result = await service.GetLista();
             collection.ItemsSource = Result;
+            sindatos.IsVisible = !Result.Any();
+            
         }
 
 

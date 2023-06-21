@@ -9,7 +9,7 @@ namespace AppEstudiantes.Conexion.Services
 {
     public class ServicioBase
     {
-        protected string URL = "https://192.168.1.18:45457";
+        protected string URL = "https://192.168.1.18:45455";
         protected string ContentType = "application/json";
 
         protected async Task<T> HttpGet<T>(string endpoint)
