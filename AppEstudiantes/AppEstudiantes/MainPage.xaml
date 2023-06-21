@@ -32,9 +32,9 @@
 
                             
 
-                            <Label x:Name="txtnombre" Text="{Binding Nombre}"   FontSize="15" FontAttributes="Bold"  HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  ></Label>
+                            <Label x:Name="txtnombre" Text="{Binding Nombre}"   FontSize="18" FontAttributes="Bold"  HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  ></Label>
 
-                            <Label x:Name="txtedada" Text="{Binding Edad}"   FontSize="15" FontAttributes="Bold"  HorizontalOptions="Start" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  ></Label>
+                            <Label x:Name="txtedada" Text="{Binding Edad}"   FontSize="18" FontAttributes="Bold"  HorizontalOptions="Start" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  ></Label>
 
                             <Button  Text="Detalle" Clicked="Detalle_Clicked" CommandParameter="{Binding Id}" BackgroundColor="green" FontSize="12" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="1"></Button>
 
