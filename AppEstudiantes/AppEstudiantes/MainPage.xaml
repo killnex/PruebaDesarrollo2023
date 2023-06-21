@@ -14,7 +14,7 @@
             <CollectionView.ItemTemplate >
                 <DataTemplate>
                     <StackLayout>
-                        <Grid BackgroundColor="{DynamicResource MainBackgroundColormain}" Padding="0,5" >
+                        <Grid BackgroundColor="Black" Padding="0,5" >
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition ></ColumnDefinition>
