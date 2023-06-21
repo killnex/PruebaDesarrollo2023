@@ -2,12 +2,6 @@
 using AppEstudiantes.Conexion.Models;
 using Rg.Plugins.Popup.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace AppEstudiantes.Popup
@@ -17,9 +11,9 @@ namespace AppEstudiantes.Popup
     {
         DemoApi Result;
         int getid;
-        public PopModificar( int id)
+        public PopModificar(int id)
         {
-            
+
             InitializeComponent();
             getid = id;
             llenarpicker();
@@ -37,7 +31,7 @@ namespace AppEstudiantes.Popup
             pickerescolaridad.SelectedItem = Result.Escolaridad;
         }
 
-        private  void llenarpicker()
+        private void llenarpicker()
         {
 
 
@@ -76,10 +70,10 @@ namespace AppEstudiantes.Popup
         public event EventHandler OnSuccess;
         private void Success()
         {
-            EventHandler handler =  OnSuccess;
+            EventHandler handler = OnSuccess;
             if (handler != null)
             {
-                handler(this,null);
+                handler(this, null);
             }
         }
     }

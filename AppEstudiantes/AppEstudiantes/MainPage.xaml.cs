@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using System.Net;
-using System.Net.Http;
-using Newtonsoft.Json;
-using System.Net.Http.Headers;
-using Rg.Plugins.Popup.Services;
-using AppEstudiantes.Popup;
+﻿using AppEstudiantes.Conexion;
 using AppEstudiantes.Conexion.Models;
-using AppEstudiantes.Conexion;
+using AppEstudiantes.Popup;
+using Rg.Plugins.Popup.Services;
+using System;
+using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace AppEstudiantes
 {
@@ -31,24 +23,9 @@ namespace AppEstudiantes
         public async void llenadoDatos()
         {
 
-                Service service = new Service();
-                Result= await service.GetLista();
-                collection.ItemsSource = Result;
-            //HttpClientHandler insecureHandler = GetInsecureHandler();
-            //HttpClient client = new HttpClient(insecureHandler);
-            //client.BaseAddress = new Uri("https://192.168.1.18:45457");
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //HttpResponseMessage response = await client.GetAsync("/api/listadoEstudiantes");
-            //Console.WriteLine(response);
-            //if (response.StatusCode == HttpStatusCode.OK)
-            //{
-            //    string content = await response.Content.ReadAsStringAsync();
-            //    var resultado = JsonConvert.DeserializeObject<List<DemoApi>>(content);
-            //    collection.ItemsSource = resultado;
-            //    Result = resultado;
-            //}
-
-
+            Service service = new Service();
+            Result = await service.GetLista();
+            collection.ItemsSource = Result;
         }
 
 

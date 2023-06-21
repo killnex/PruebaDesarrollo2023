@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AppEstudiantes.Conexion.Models
+﻿namespace AppEstudiantes.Conexion.Models
 {
     public class DemoApi
     {
