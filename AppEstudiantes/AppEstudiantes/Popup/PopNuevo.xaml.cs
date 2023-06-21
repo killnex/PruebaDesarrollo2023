@@ -44,16 +44,26 @@ namespace AppEstudiantes.Popup
 
         private async void guardar_Clicked(object sender, EventArgs e)
         {
-            Result.Nombre = entryname.Text;
-            Result.Edad = int.Parse(entryedad.Text);
-            Result.Sexo = pickersexo.SelectedItem.ToString();
-            Result.Escolaridad = pickerescolaridad.SelectedItem.ToString();
+            if (entryname.Text == null && entryedad.Text == null && pickersexo.SelectedIndex == -1 && pickerescolaridad.SelectedIndex == -1)
+            {
+                sindatos.IsVisible = true;
+            }
+            else 
+            {
+                Result.Nombre = entryname.Text;
+                Result.Edad = int.Parse(entryedad.Text);
+                Result.Sexo = pickersexo.SelectedItem.ToString();
+                Result.Escolaridad = pickerescolaridad.SelectedItem.ToString();
 
 
-            Service service = new Service();
-            Result = await service.New(Result);
-            Success();
-            await PopupNavigation.Instance.PopAllAsync();
+                Service service = new Service();
+                Result = await service.New(Result);
+                Success();
+                await PopupNavigation.Instance.PopAllAsync();
+            }
+
+
+
         }
 
         public event EventHandler OnSuccess;
